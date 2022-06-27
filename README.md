@@ -1,1 +1,13 @@
 # Pingale-Milk-Water-Suppliers.github.io
+![Screeshots 1](https://user-images.githubusercontent.com/80944426/176006837-a74c004b-7e72-43ad-b2b1-6e7a3561904b.jpg)
+![Service 2](https://user-images.githubusercontent.com/80944426/176006878-bd5e3393-b074-4a41-9b25-a729e1429f49.jpg)
+![Water](https://user-images.githubusercontent.com/80944426/176006895-42bdbe65-0c15-4549-ab53-20e224fcb71a.jpg)
+![Water2](https://user-images.githubusercontent.com/80944426/176006913-9396731c-6d8a-48f2-af21-77eae104b51a.jpg)
+![Milk1](https://user-images.githubusercontent.com/80944426/176006951-b1986a96-b258-4ceb-8d41-7f3cfcbdf834.jpg)
+![Milk2](https://user-images.githubusercontent.com/80944426/176006968-520ce1e7-972b-49ce-8c99-6568504123f4.jpg)
+![Order](https://user-images.githubusercontent.com/80944426/176006987-aaeb477a-d893-47b8-a653-8cae326404ad.jpg)
+![Registration Pg](https://user-images.githubusercontent.com/80944426/176007014-ca8c15dd-09c2-49dc-8650-1f8e83c9ad77.jpg)
+![Contact](https://user-images.githubusercontent.com/80944426/176007030-3ea8df4c-957d-4cac-8c56-f800d8f1715b.jpg)
+![Feedback](https://user-images.githubusercontent.com/80944426/176007044-f5a44a4d-1e4b-4e88-8936-5bfd9014a44d.jpg)
+![Feedback1](https://user-images.githubusercontent.com/80944426/176007076-e240ba54-8d1e-46f1-8c02-be899b04653e.jpg)
+![Feedback2](https://user-images.githubusercontent.com/80944426/176007086-11b3b593-1f37-4fc6-a094-ec39e2768475.jpg)
