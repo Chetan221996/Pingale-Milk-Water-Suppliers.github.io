@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Orders</title>
+    <link rel="icon" href="Images/icon.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+<style type="text/css">
+
+body{
+  background: #dedede;
+  font-family: arial;
+  margin:0;
+  padding:0;
+}
+
+.dropdown{
+  margin:0 auto;
+}
+
+
+nav{
+  height: 50 px;
+  background:#243342;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+.logo{
+  padding:10px 0 0;
+  width:30px;
+  height:20px;
+}
+
+label.logo
+{
+  color: whitesmoke;
+  font-size: 25px;
+  display:inline;
+  line-height: 40px;
+  padding: 0 10px;
+  font-style:bold;
+}
+
+
+nav ul {
+  
+  padding:20;
+  margin:0;
+  float:right;
+  margin-right: 30px;
+}
+
+nav ul li{
+  background: #2c3e50;
+  position: relative;
+  list-style: none;
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding:0 15px;
+  color:  white;
+  text-decoration: none;
+  line-height:60px;
+  font-size:20px;
+}
+.show:hover{
+  color:cyan;
+}
+.icon{
+  display:block;
+  color:white;
+  position:absolute;
+  right:40px;
+  line-height:70px;
+  font-size:25px;
+  cursor:pointer;
+}
+
+nav ul li a:hover{
+  color:cyan;
+  border-radius: 5px ;
+  box-shadow:0 0 5px #33ffff,
+             0 0 5px #66ffff;
+  background:#243342;
+}
+.show +a,ul{
+  display: block;
+}
+[id^=btn]:checked +ul{
+  display: block;
+}
+nav ul ul li a:hover{
+  color:cyan;
+  box-shadow: none;
+}
+
+nav ul ul{
+  position:absolute;
+  top: 90px;
+  opacity: 0;
+  visibility:hidden;
+  transition: top .3s;
+}
+
+nav ul ul ul{
+  border-top:none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  width: 150px;
+  float:none;
+  display:list-item;
+  position:relative;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  letter-spacing:150px;
+}
+.show,.icon {
+  display:none;
+}
+@media all and (max-width:968px){
+  nav ul{
+    margin-right:0px;
+    float:left;
+  }
+  .logo{
+    padding-left: 30px;
+    width:100%;
+  }
+  nav ul li, nav ul ul li{
+    display:block;
+    width:100%;
+  }
+  nav ul ul{
+    top:70px;
+    position: static;
+    border-top:none;
+    float:none;
+    display:none;
+    opacity:1;
+    visibility:visible;
+  }
+  .show{
+    display:block;
+    color:white;
+    font-size: 18px;
+    padding:0 20px;
+    line-height: 70px;
+    cursor:pointer;
+  }
+}
+
+.regform{
+  width:800px;
+  background-color:rgb(0,0,0,0.6);
+  margin:auto;
+  color:#ffffff;
+  padding:10px 0px 10px 0px;
+  text-align:center;
+  border-radius:15px 15px 0px 0px;
+}
+
+.main{
+  background-color:rgb(0,0,0,0.5);
+  width:800px;
+  margin:auto;
+}
+form{
+  padding:10px;
+}
+#name{
+  width:100%;
+  height:100px;
+}
+.name{
+  margin-left:25px;
+  margin-top:30px;
+  width:125px;
+  color:white;
+  font-size:18px;
+  font-weight:700;
+}
+.firstname{
+  position:relative;
+  left:200px;
+  top:-30px;
+  line-height:40px;
+  border-radius:6px;
+  padding:0 22px;
+  font-size:16px;
+}
+.lastname{
+  position:relative;
+  left:417px;
+  top:-75px;
+  line-height:40px;
+  border-radius:6px;
+  padding:0 22px;
+  font-size:16px;
+  color:#555;
+}
+.firstlabel{
+  position:relative;
+  color:#E5E5E5;
+  text-transform:capitalize;
+  font-size:14px;
+  left:203px;
+  top: -45px;
+}
+.lastlabel{
+  position:relative;
+  color:#E5E5E5;
+  text-transform:capitalize;
+  font-size:14px;
+  left:175px;
+  top: -45px;
+
+}
+
+.address{
+  position:relative;
+  left:200px;
+  top:-37px;
+  line-height:40px;
+  width:480px;
+  border-radius:6px;
+  padding:0 22px;
+  font-size:16px;
+  color:#555;
+}
+
+
+
+.option{
+  
+  position:relative;
+  left:200px;
+  top:-37px;
+  line-height:40px;
+  width:350px;
+  height:40px;
+  border-radius:6px;
+  padding:0 22px;
+  font-size:16px;
+  color:#555;
+  outline:none;
+  overflow:hidden;
+}
+.option option{
+  font-size:20px;
+}
+button{
+  background-color: #3BAF9F;
+  display:inline;
+  margin:20px 0px 0px 20px;
+  text-align:center;
+  border-radius:50px;
+  border:2px solid #366473;
+  padding:14px 110px;
+  outline:none;
+  color:white;
+  cursor:pointer;
+  transition:0.25px;
+  }
+  button:hover{
+    background-color:#539;
+  }
+  footer
+{
+  position: relative;
+  width:100%;
+  background:#2c3e50;
+  min-height: 100 px;
+  padding:20px 50 px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .social_icon,
+footer .menu
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap:wrap;
+}
+ 
+footer .social_icon li,
+footer .menu li
+{
+  list-style: none;
+}
+footer .social_icon li a
+
+{
+  font-size: 2em;
+  color:#fff;
+  margin:0 10px;
+  display:inline-block;
+  transition:0.5s;
+}
+footer .social_icon li a:hover
+{
+  transform:translateY(-10px);
+}
+
+footer .menu li a
+
+{
+  font-size: 2em;
+  color:#fff;
+  margin:0 10px;
+  display:inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover
+{
+  opacity:1;
+}
+
+footer p{
+  color:rgb(248, 231, 231);
+  text-align:center;
+  margin-top: 15 px;
+  margin-bottom: 10px;
+  font-size:1.1em;
+
+}
+.logo-facebook{
+  color: blue;
+}
+.logo-instagram{
+  color:#e84393;
+
+}
+.logo-twitter{
+  color:#0097e6;
+}
+.logo-whatsapp{
+  color:rgb(20, 196, 20);
+}
+.logo-linkedin{
+  color:#0097e6;
+}
+
+
+
+
+</style>
+<script>
+
+var productObject = {
+  "Water": { 
+  "Bisleri": ["1/2L", "1L","2L","5L JAR","10L JAR"],
+  "Oxiriva": ["1/2","1L"],
+  "Oxirich": ["1/2L","1L"],
+  
+  
+  },
+  "Milk": {
+  "Gokul": ["1/2L", "1L"],
+  "Mahanand": ["1/2L", "1L"],
+  
+  },
+  "ColdDrinks": {
+  "Pepsi": ["1/2L","1L","2L"],
+  "Coca-Cola": ["1/2L","1L","2L"],
+  "Mirinda":["1/2L","1L","2L"],
+  "Fruti":["1/2L"],
+  "Limca":["1/2L","1L","2L"],
+  "Maza":["1/2","1L","2L"],
+  "Soda":["1/2L","1L"],
+  "Sprite":["1/2L","1L"],
+  },
+
+  "Coal":{
+   "Special Coal":["1-katta 300 rs"],
+   "Normal Coal":["1-katta 250 rs"],
+
+  },
+  "Maize":{
+    "Special Maize":["1-katta 300 rs"],
+    "Small Maize":["1-Katta 250 rs"],
+  },
+}
+  window.onload = function () {
+  var countySel = document.getElementById("countySel"),
+  productSel = document.getElementById("productSel"),
+  brandSel = document.getElementById("brandSel");
+  for (var product in productObject) {
+  countySel.options[countySel.options.length] = new Option(product, product);
+  }
+  countySel.onchange = function () {
+  productSel.length = 1; // remove all options bar first
+  brandSel.length = 1; // remove all options bar first
+  if (this.selectedIndex < 1) return; // done
+  for (var product in productObject[this.value]) {
+  productSel.options[productSel.options.length] = new Option(product, product);
+  }
+  }
+  countySel.onchange(); // reset in case page is reloaded
+  productSel.onchange = function () {
+  brandSel.length = 1; // remove all options bar first
+  if (this.selectedIndex < 1) return; // done
+  var brand = productObject[countySel.value][this.value];
+  for (var i = 0; i < brand.length; i++) {
+  brandSel.options[brandSel.options.length] = new Option(brand[i], brand[i]);
+  }
+  }
+  }
+  function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+    
+    </script>
+
+<nav>
+    <img class="logog" src="Images/logo.png">
+    <b><label class="logo">Pingale Milk & Water Suppliers</label>
+    </b><ul>
+     <li><a href="Index.html">Home</a></li>
+
+     <li><a href="Introduction.html">Introduction</a>
+      <ul>
+      <li><a href="Water.html">Water</a></li>
+      <li><a href="Milk.html">Milk</a></li>
+      <li><a href="ColdDrinks.html">ColdDrinks</a></li>
+
+      <li><a href="Coal.html">Coal</a></li>
+
+     </ul>
+     </li>
+
+     <li><a href="Orders.html">Orders</a>
+
+       
+
+      </li>
+
+      <li><a href="Register.html">Register</a></li>
+
+      <li><a href="Contact.html">Contact</a></li>
+
+      <li><a href="Feedback.html">Feedback</a></li>
+
+    </ul>
+  </nav>
+  <div class="regform"></div>
+  <div class="main">
+    <form>
+      <div id="name">
+  <h2 class="name">Name</h2>
+  <input class="firstname" type="text" name="first_name" placeholder="Enter your First Name" required><br>
+  <label class="firstlabel">first name</label>
+  <input class="lastname" type="text" name="first_name" placeholder="Enter your Last Name" required>
+  <label class="lastlabel">last name</label>
+  </div>
+  <h2 Class="name">Address</h2>
+  <textarea class="address" type="text" name="address"  placeholder="Enter your  Address" required>
+  </textarea>
+  
+  <h2 class="name">Select Product:</h2>  
+  <select name="product" id="countySel"  class="option" size="1">
+    <option value="" selected="selected">Select Product</option>
+    </select>
+    <br>
+    <br>
+  
+  
+    <h2 class="name">Select Brand:</h2>  
+   <select name="countrya" id="productSel"  class="option"size="1">
+    <option value="" selected="selected">Please select product first</option>
+    </select>
+    <br>
+    <br>
+    
+    <h2 class="name">Select Measure:</h2> 
+     <select name="brand" id="brandSel" class="option" size="1">
+    <option value="" selected="selected">Please select Brand first</option>
+    </select><br>
+
+    <Center><button id="btnone" type="Submit">Submit</button></Center>
+
+</body>
+<footer>
+  <ul class="social_icon">
+    <li><a href="http://www.facebook.com/chetan.pingale.984"><ion-icon class="logo-facebook"name="logo-facebook"></ion-icon></a></li>
+    <li><a href="#"><ion-icon class="logo-twitter" name="logo-twitter"></ion-icon></a></li>  
+    <li><a href="https://www.linkedin.com/in/chetan-pingale-000950113/"><ion-icon class="logo-linkedin" name="logo-linkedin"></ion-icon></a></li>  
+    <li><a href="#"><ion-icon class="logo-google" name="logo-google"></ion-icon></a></li>  
+    <li><a href="https://www.instagram.com/_pingu2202_/"><ion-icon class="logo-instagram" name="logo-instagram"></ion-icon></a></li>  
+    <li><a href="http://api.whatsapp.com/send?phone=9370333125&text=Welcome to My whatsapp"><ion-icon class="logo-whatsapp" name="logo-whatsapp"></ion-icon></a></li>  
+
+
+</ul>
+<ul class="menu">
+<li><a href="Index.html">Home</a></li>
+<li><a href="#">About us</a></li>
+<li><a href="#">Service</a></li>
+<li><a href="Contact.html">Contact</a></li>
+
+
+
+</ul>
+<p id="foo">&copy;<center> <b> Copyright @2022 Milk and Water Suppliers. Designed by Chetan Pingale </b></center></p>
+
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>

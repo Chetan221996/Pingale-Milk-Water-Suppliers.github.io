@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<head>
+    <title>
+       Pingale Milk & Water Suppliers</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="icon" href="Images/icon.png">
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        <link rel ="stylesheet" type="text/css" href="Css/style1.css">
+       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+       <link rel="icon" href="icon.jpg">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+body{
+ background: #dedede;
+ font-family: arial;
+ margin:0;
+ padding:0;
+}
+
+.dropdown{
+ margin:0 auto;
+}
+
+
+nav{
+ height: 50 px;
+ background:#243342;
+ box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+.logo{
+ padding:10px 0 0;
+ width:30px;
+ height:20px;
+}
+
+label.logo
+{
+ color: whitesmoke;
+ font-size: 25px;
+ display:inline;
+ line-height: 40px;
+ padding: 0 10px;
+ font-style:bold;
+}
+
+
+nav ul {
+ 
+ padding:20;
+ margin:0;
+ float:right;
+ margin-right: 30px;
+}
+
+nav ul li{
+ background: #2c3e50;
+ position: relative;
+ list-style: none;
+ display: inline-block;
+}
+nav ul li a {
+ display: block;
+ padding:0 15px;
+ color:  white;
+ text-decoration: none;
+ line-height:60px;
+ font-size:20px;
+}
+.show:hover{
+ color:cyan;
+}
+.icon{
+ display:block;
+ color:white;
+ position:absolute;
+ right:40px;
+ line-height:70px;
+ font-size:25px;
+ cursor:pointer;
+}
+
+nav ul li a:hover{
+ color:cyan;
+ border-radius: 5px ;
+ box-shadow:0 0 5px #33ffff,
+            0 0 5px #66ffff;
+ background:#243342;
+}
+.show +a,ul{
+ display: block;
+}
+[id^=btn]:checked +ul{
+ display: block;
+}
+nav ul ul li a:hover{
+ color:cyan;
+ box-shadow: none;
+}
+
+nav ul ul{
+ position:absolute;
+ top: 90px;
+ opacity: 0;
+ visibility:hidden;
+ transition: top .3s;
+}
+
+nav ul ul ul{
+ border-top:none;
+}
+nav ul li:hover > ul{
+ top: 70px;
+ opacity: 1;
+ visibility: visible;
+}
+nav ul ul li{
+ position: relative;
+ width: 150px;
+ float:none;
+ display:list-item;
+ position:relative;
+}
+nav ul ul li a{
+ line-height: 50px;
+}
+nav ul ul ul li{
+ position: relative;
+ top: -60px;
+ letter-spacing:150px;
+}
+.show,.icon,input {
+ display:none;
+}
+@media all and (max-width:968px){
+ nav ul{
+   margin-right:0px;
+   float:left;
+ }
+ .logo{
+   padding-left: 30px;
+   width:100%;
+ }
+ nav ul li, nav ul ul li{
+   display:block;
+   width:100%;
+ }
+ nav ul ul{
+   top:70px;
+   position: static;
+   border-top:none;
+   float:none;
+   display:none;
+   opacity:1;
+   visibility:visible;
+ }
+ .show{
+   display:block;
+   color:white;
+   font-size: 18px;
+   padding:0 20px;
+   line-height: 70px;
+   cursor:pointer;
+ }
+}
+
+.welcome
+{
+margin-top: 5%;
+background-color: white;
+margin-left: 6%;
+}
+
+.about1 #pp1
+{
+    font-size: 35px;
+    color: #3e3f3f;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(111, 189, 69);
+    padding-bottom: 2%;
+}
+.about1 label
+{
+  font-size: larger;
+  color: rgb(115, 163, 44);
+}
+
+
+footer
+{
+  position: relative;
+  width:100%;
+  background:#2c3e50;
+  min-height: 100 px;
+  padding:20px 50 px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .social_icon,
+footer .menu
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap:wrap;
+}
+ 
+footer .social_icon li,
+footer .menu li
+{
+  list-style: none;
+}
+footer .social_icon li a
+
+{
+  font-size: 2em;
+  color:#fff;
+  margin:0 10px;
+  display:inline-block;
+  transition:0.5s;
+}
+footer .social_icon li a:hover
+{
+  transform:translateY(-10px);
+}
+
+footer .menu li a
+
+{
+  font-size: 2em;
+  color:#fff;
+  margin:0 10px;
+  display:inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover
+{
+  opacity:1;
+}
+
+footer p{
+  color:rgb(248, 231, 231);
+  text-align:center;
+  margin-top: 15 px;
+  margin-bottom: 10px;
+  font-size:1.1em;
+
+}
+.logo-facebook{
+  color: blue;
+}
+.logo-instagram{
+  color:#e84393;
+
+}
+.logo-twitter{
+  color:#0097e6;
+}
+.logo-whatsapp{
+  color:rgb(20, 196, 20);
+}
+.logo-linkedin{
+  color:#0097e6;
+}
+
+</style>
+        <body>
+         <div class="dropdown">
+           <nav>
+             <img class="logog" src="Images/logo.png">
+             <label class="logo">Pingale Milk & Water Suppliers</label>
+             <ul>
+              <li><a href="Index.html">Home</a></li>
+
+              <label for="btn-1" class="show">Introduction +</label>
+              <li><a href="Introduction.html">Introduction</a>
+              <input type="checkbox" id="btn-1">
+               <ul>
+               <li><a href="Water.html">Water</a></li>
+               <li><a href="Milk.html">Milk</a></li>
+               <li><a href="ColdDrinks.html">ColdDrinks</a></li>
+
+               <li><a href="Coal.html">Coal</a></li>
+
+              </ul>
+              </li>
+
+              <li><a href="Orders.html">Orders</a>
+               
+
+               </li>
+
+               <li><a href="Register.html">Register</a></li>
+
+               <li><a href="Contact.html">Contact</a></li>
+
+               <li><a href="Feedback.html">Feedback</a></li>
+
+             </ul>
+           </nav>
+           <div class="welcome">
+            <div class="about1"><br>
+                <p id="pp1">Welcome to <label>ColdDrinks Quality</label> </p>
+                <br><br>
+                <img src="Images/bottles-polyethylene-terephthalate.jpg" alter="Coldrinknss">
+              <p>soft drink, any of a class of nonalcoholic beverages, usually but not necessarily carbonated, normally containing a natural or artificial sweetening agent, edible acids, natural or artificial flavours, and sometimes juice. Natural flavours are derived from fruits, nuts, berries, roots, herbs, and other plant sources. Coffee, tea, milk, cocoa, and undiluted fruit and vegetable juices are not considered soft drinks.
+
+                The term soft drink was originated to distinguish the flavoured drinks from hard liquor, or distilled spirits. Soft drinks were recommended as a substitute in the effort to change the hard-drinking habits of early Americans. Indeed, health concerns of modern consumers led to new categories of soft drinks emphasizing low calorie count, low sodium content, no caffeine, and “all natural” ingredients.</p>
+                <p>There are many specialty soft drinks. Mineral waters are very popular in Europe and Latin America. Kava, made from roots of a bushy shrub, Piper methysticum, is consumed by the people of Fiji and other Pacific islands. In Cuba people enjoy a carbonated cane juice; its flavour comes from unrefined syrup. In tropical areas, where diets frequently lack sufficient protein, soft drinks containing soybean flour have been marketed. In Egypt carob (locust bean) extract is used. In Brazil a soft drink is made using maté as a base. The whey obtained from making buffalo cheese is carbonated and consumed as a soft drink in North Africa. Some eastern Europeans enjoy a drink prepared from fermented stale bread. Honey and orange juice go into a popular drink of Israel.</p>
+                <p><b>History of soft drinks :</b></p>
+                <p>The first marketed soft drinks appeared in the 17th century as a mixture of water and lemon juice sweetened with honey. In 1676 the Compagnie de Limonadiers was formed in Paris and granted a monopoly for the sale of its products. Vendors carried tanks on their backs from which they dispensed cups of lemonade.
+
+                  Carbonated beverages and waters were developed from European attempts in the 17th century to imitate the popular and naturally effervescent waters of famous springs, with primary interest in their reputed therapeutic values. The effervescent feature of the waters was recognized early as most important. Flemish scientist Jan Baptista van Helmont first used the term gas in his reference to the carbon dioxide content. French physician Gabriel Venel referred to aerated water, confusing the gas with ordinary air. British scientist Joseph Black named the gaseous constituent fixed air.</p>
+                  <p>
+
+                    
+                    Robert Boyle, an Anglo-Irish philosopher and scientist who helped found modern chemistry, published his Short Memoirs for the Natural Experimental History of Mineral Waters in 1685. It included sections on examining mineral springs, on the properties of the water, on its effects upon the human body, and, lastly, “of the imitation of natural medicinal waters by chymical and other artificial wayes.”
+                    
+                    Numerous reports of experiments and investigations were included in the Philosophical Transactions of the Royal Society of London in the late 1700s, including the studies of Stephen Hales, Joseph Black, David Macbride, William Brownrigg, Henry Cavendish, and Thomas Lane.
+                    
+                    English clergyman and scientist Joseph Priestley is nicknamed “the father of the soft drinks industry” for his experiments on gas obtained from the fermenting vats of a brewery. In 1772 he demonstrated a small carbonating apparatus to the College of Physicians in London, suggesting that, with the aid of a pump, water might be more highly impregnated with fixed air. French chemist Antoine-Laurent Lavoisier made the same suggestion in 1773.
+                    
+                    To Thomas Henry, an apothecary in Manchester, England, is attributed the first production of carbonated water, which he made in 12-gallon barrels using an apparatus based on Priestley’s design. Swiss jeweler Jacob Schweppe read the papers of Priestley and Lavoisier and determined to make a similar device. By 1794 he was selling his highly carbonated artificial mineral waters to his friends in Geneva; later he started a business in London.</p>
+                    <p><b>Production :</b></p>
+                    <p>All ingredients used in soft drinks must be of high purity and food grade to obtain a quality beverage. These include the water, carbon dioxide, sugar, acids, juices, and flavours.</p>
+                    <img src="Images/ColdDrink.jpg" alter="ColdDrink">
+
+                    <p><b>Water</b></p>
+                    <P>
+                      Although water is most often taken from a safe municipal supply, it usually is processed further to ensure uniformity of the finished product; the amount of impurities in the municipal supply may vary from time to time. In some bottling plants the water-treatment equipment may simply consist of a sand filter to remove minute solid matter and activated carbon purifier to remove colour, chlorine, and other tastes or odours. In most plants, however, water is treated by a process known as superchlorination and coagulation. There the water is exposed for two hours to a high concentration of chlorine and to a flocculant, which removes organisms such as algae and bacteria; it then passes through a sand filter and activated carbon.
+                      
+                     <p><b>Carbon dioxide and carbonation :</b></p> 
+                     
+                  <p>Carbon dioxide gas gives the beverage its sparkle and tangy taste and prevents spoilage. It is supplied to the soft drink manufacturer in either solid form (dry ice) or liquid form maintained under approximately 1,200 pounds per square inch (84 kilograms per square centimetre) pressure in heavy steel containers. Lightweight steel containers are used when the liquid carbon dioxide is held under refrigeration. In that case, the internal pressure is about 325 pounds per square inch.</P>
+                  </p>
+                    <footer>
+            <ul class="social_icon">
+              <li><a href="http://www.facebook.com/chetan.pingale.984"><ion-icon class="logo-facebook"name="logo-facebook"></ion-icon></a></li>
+              <li><a href="#"><ion-icon class="logo-twitter" name="logo-twitter"></ion-icon></a></li>  
+              <li><a href="https://www.linkedin.com/in/chetan-pingale-000950113/"><ion-icon class="logo-linkedin" name="logo-linkedin"></ion-icon></a></li>  
+              <li><a href="#"><ion-icon class="logo-google" name="logo-google"></ion-icon></a></li>  
+              <li><a href="https://www.instagram.com/_pingu2202_/"><ion-icon class="logo-instagram" name="logo-instagram"></ion-icon></a></li>  
+              <li><a href="http://api.whatsapp.com/send?phone=9370333125&text=Welcome to My whatsapp"><ion-icon class="logo-whatsapp" name="logo-whatsapp"></ion-icon></a></li>  
+
+        
+        
+        </ul>
+        <ul class="menu">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        
+        
+        
+        </ul>
+        <p id="foo">&copy;<center> <b> Copyright @2022 Milk and Water Suppliers. Designed by <label>Chetan Pingale</label></b></center></p>
+        
+          </footer>
+        
+        </div> 
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+
+         </div>
+        </body>
+        </html>

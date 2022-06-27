@@ -1,0 +1,369 @@
+ <html lang="en">
+<head>
+    <title>
+        Feedback 
+    </title>
+    <link rel="icon" href="Images/icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        <link rel ="stylesheet" type="text/css" href="Css/style1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<Style>
+body{
+ background: #dedede;
+ font-family: arial;
+ margin:0;
+ padding:0;
+}
+
+.dropdown{
+ margin:0 auto;
+}
+
+
+nav{
+ height: 50 px;
+ background:#243342;
+ box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+.logo{
+ padding:10px 0 0;
+ width:30px;
+ height:20px;
+}
+
+label.logo
+{
+ color: whitesmoke;
+ font-size: 25px;
+ display:inline;
+ line-height: 40px;
+ padding: 0 10px;
+ font-style:bold;
+}
+
+
+nav ul {
+ 
+ padding:20;
+ margin:0;
+ float:right;
+ margin-right: 30px;
+}
+
+nav ul li{
+ background: #2c3e50;
+ position: relative;
+ list-style: none;
+ display: inline-block;
+}
+nav ul li a {
+ display: block;
+ padding:0 15px;
+ color:  white;
+ text-decoration: none;
+ line-height:60px;
+ font-size:20px;
+}
+.show:hover{
+ color:cyan;
+}
+.icon{
+ display:block;
+ color:white;
+ position:absolute;
+ right:40px;
+ line-height:70px;
+ font-size:25px;
+ cursor:pointer;
+}
+
+nav ul li a:hover{
+ color:cyan;
+ border-radius: 5px ;
+ box-shadow:0 0 5px #33ffff,
+            0 0 5px #66ffff;
+ background:#243342;
+}
+.show +a,ul{
+ display: block;
+}
+[id^=btn]:checked +ul{
+ display: block;
+}
+nav ul ul li a:hover{
+ color:cyan;
+ box-shadow: none;
+}
+
+nav ul ul{
+ position:absolute;
+ top: 90px;
+ opacity: 0;
+ visibility:hidden;
+ transition: top .3s;
+}
+
+nav ul ul ul{
+ border-top:none;
+}
+nav ul li:hover > ul{
+ top: 70px;
+ opacity: 1;
+ visibility: visible;
+}
+nav ul ul li{
+ position: relative;
+ width: 150px;
+ float:none;
+ display:list-item;
+ position:relative;
+}
+nav ul ul li a{
+ line-height: 50px;
+}
+nav ul ul ul li{
+ position: relative;
+ top: -60px;
+ letter-spacing:150px;
+}
+.show,.icon,input {
+ display:none;
+}
+@media all and (max-width:968px){
+ nav ul{
+   margin-right:0px;
+   float:left;
+ }
+ .logo{
+   padding-left: 30px;
+   width:100%;
+ }
+ nav ul li, nav ul ul li{
+   display:block;
+   width:100%;
+ }
+ nav ul ul{
+   top:70px;
+   position: static;
+   border-top:none;
+   float:none;
+   display:none;
+   opacity:1;
+   visibility:visible;
+ }
+ .show{
+   display:block;
+   color:white;
+   font-size: 18px;
+   padding:0 20px;
+   line-height: 70px;
+   cursor:pointer;
+ }
+}
+
+  input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+body{
+  background: #dedede;
+  font-family: arial;
+  margin:0;
+  padding:0;
+}
+
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+footer
+{
+  position: relative;
+  width:100%;
+  background:#2c3e50;
+  min-height: 100 px;
+  padding:20px 50 px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo-facebook{
+  color: blue;
+}
+.logo-instagram{
+  color:#e84393;
+
+}
+.logo-twitter{
+  color:#0097e6;
+}
+.logo-whatsapp{
+  color:rgb(20, 196, 20);
+}
+.logo-linkedin{
+  color:#0097e6;
+}
+
+
+
+  </style>
+
+ 
+
+<body>
+
+    <nav>
+        <img class="logog" src="Images/logo.png">
+        <b><label class="logo">Pingale Milk & Water Suppliers</label>
+        </b><ul>
+            <li><a href="Index.html">Home</a></li>
+
+            <label for="btn-1" class="show">Introduction +</label>
+               <li><a href="Introduction.html">Introduction</a>
+               <input type="checkbox" id="btn-1">
+                <ul>
+                <li><a href="Water.html">Water</a></li>
+                <li><a href="Milk.html">Milk</a></li>
+                <li><a href="ColdDrinks.html">ColdDrinks</a></li>
+
+                <li><a href="Coal.html">Coal</a></li>
+
+               </ul>
+               </li>
+
+               <li><a href="Orders.html">Orders</a>
+               
+
+          </li>
+
+          <li><a href="Register.html">Register</a></li>
+
+          <li><a href="Contact.html">Contact</a></li>
+
+          <li><a href="Feedback.html">Feedback</a></li>
+
+        </ul>
+      </nav>
+    
+
+    
+
+<div class="container" style="padding: top 100px">
+    <form  method="POST">
+      <label for="name">Name</label>
+
+  <input type="text" id="name" placeholder="Enter your full name" class="form-control" required><br>
+  <label for="email">Email</label>
+
+  <input type="text" id="email" placeholder="Enter your email" class="form-control" required><br>
+  <label for="phone">Phone</label>
+
+  <input type="text" id="phone" placeholder="Enter your phone" class="form-control" required><br>
+      <label for="subject">Feedback</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" class="form-control" required></textarea>
+
+      <button type="button" id="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+  
+  <footer>
+    <ul class="social_icon">
+      <li><a href="http://www.facebook.com/chetan.pingale.984"><ion-icon class="logo-facebook"name="logo-facebook"></ion-icon></a></li>
+              <li><a href="#"><ion-icon class="logo-twitter" name="logo-twitter"></ion-icon></a></li>  
+              <li><a href="https://www.linkedin.com/in/chetan-pingale-000950113/"><ion-icon class="logo-linkedin" name="logo-linkedin"></ion-icon></a></li>  
+              <li><a href="#"><ion-icon class="logo-google" name="logo-google"></ion-icon></a></li>  
+              <li><a href="https://www.instagram.com/_pingu2202_/"><ion-icon class="logo-instagram" name="logo-instagram"></ion-icon></a></li>  
+              <li><a href="http://api.whatsapp.com/send?phone=9370333125&text=Welcome to My whatsapp"><ion-icon class="logo-whatsapp" name="logo-whatsapp"></ion-icon></a></li>  
+
+  
+  
+  </ul>
+  <ul class="menu">
+  <li><a href="Index.html">Home</a></li>
+  <li><a href="#">About us</a></li>
+  <li><a href="#">Service</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+  
+  
+  
+  </ul>
+  <p id="foo">&copy;<center> <b> Copyright @2022 Milk and Water Suppliers. Designed by Chetan Pingale</b></center></p>
+  
+  </footer>
+  
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script>
+
+$("#submit").click(function(){
+var name=$("#name").val();
+var email=$("email").val();
+var phone=$("phone").val();
+var feedback=$("feedback").val();
+
+if(name== '' || email== ''|| phone=='' || feedback==''){
+
+  swal({
+  title: "Fields Empty!!",
+  text: "Please Check the Missing Fields!",
+  icon: "warning",
+  button: "OK",
+});
+}
+else{
+  swal({
+  title: "Successfully Submitted",
+  icon: "success",
+  button: "Yes...",
+});
+}
+});
+    
+
+    
+  </script>
+   </body>
+  </html>
